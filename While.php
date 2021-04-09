@@ -1,7 +1,7 @@
 ﻿<?php
 	$A = 1;
 	While ($A <= 10){;
-		echo $A;
+		echo $A . '<br />';
 		$A = $A + 1;
 	}
 ?>
