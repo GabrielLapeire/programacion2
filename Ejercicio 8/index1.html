@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="width: auto; height: auto; text-align: center;">
+        <span style="color: red;">
+            <h1>Selectores DOM</h1>
+        </span>
+
+
+
+        <div style="width: auto; height: auto; text-align: center;">
+            <h1 id="texto1" onmouseover="BlueText(this)" onmouseout="NormalText(this)">TEXTO 1</h1>
+        </div>
+        <hr />
+        <select name="colores" id="colores" style="width: 100px;" onchange="Color(this)">
+            <option value="amarillo">Amarillo</option>
+            <option value="azul">Azul</option>
+            <option value="rojo">Rojo</option>
+        </select>
+    </div>
+
+    <hr />
+    <div style="width: auto; height: auto; text-align: center; padding-top: 10px;">
+        <select id="numeros" name="numeros" style="width: 100px;" onchange="Numero(this)">
+            <option value="1">uno</option>
+            <option value="2">dos</option>
+            <option value="3">tres</option>
+        </select>
+    </div>
+    <hr />
+
+    <div style="width: auto; height: auto; text-align: center; padding-top: 10px;">
+        <textarea id="textarea" ondblclick="TextArea(this)">Esto es un ejercicio practico de programacion II</textarea>
+    </div>
+
+    <hr />
+
+    <div style="width: auto; height: auto; text-align: center; padding-top: 10px;">
+        <input id="1st" type="number" name="valor1"> + <input id="2nd" type="number" name="valor2"> = <input id="3rd" type="number" name="resultado"><br>
+        <button name="suma" onclick="Suma(this)">Sumar</button>
+    </div>
+    <hr />
+
+    <div ondblclick="AllColor(this)">
+        Esto es un DIV
+    </div>
+    <hr />
+
+    <script>
+    	function BlueText(x) {
+    		x.style.color = "blue";
+        }
+    	function NormalText(x) {
+    		x.style.color = "black"
+    	}
+    	function Color(x) {
+    		var x = document.getElementById("colores").value;
+    		alert(x)
+    	}
+        function Numero(x) {
+            var x = document.getElementById("numeros").value;
+            alert(x)
+        }
+        function TextArea(x) {
+            var x = document.getElementById("textarea").value;
+            alert(x)
+        }
+        function Suma(x) {
+            var x = document.getElementById("1st").value;
+            var y = x
+            var x = document.getElementById("2nd").value;
+            var z = x
+            x = y + z
+            document.getElementById("3rd").value = x;
+            alert(x)
+        }
+        function AllColor(x) {
+            x.style.color = "red"
+            x.style.background = "yellow"
+        }
+    </script>
+
+</body>
+
+</html>
